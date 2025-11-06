@@ -1522,6 +1522,22 @@
                 <div class="course-sidebar">
                     <h2 id="course-title" style="margin-bottom: 2rem;"></h2>
                     <div id="course-modules"></div>
+                    
+                    <!-- Timer Pomodoro intégré -->
+                    <div class="study-timer" style="margin-top: 2rem;">
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">⏱️ Chronomètre</h3>
+                        <p style="opacity: 0.9; font-size: 0.85rem; margin-bottom: 0.5rem;">Pomodoro: 25min + 5min pause</p>
+                        <div class="timer-display" id="learningTimerDisplay" style="font-size: 2rem; margin: 0.5rem 0;">25:00</div>
+                        <div class="timer-controls" style="gap: 0.5rem;">
+                            <button class="timer-btn" id="learningStartTimer" style="padding: 0.5rem 1rem; font-size: 0.85rem;">▶</button>
+                            <button class="timer-btn" id="learningPauseTimer" style="padding: 0.5rem 1rem; font-size: 0.85rem;">⏸</button>
+                            <button class="timer-btn" id="learningResetTimer" style="padding: 0.5rem 1rem; font-size: 0.85rem;">↻</button>
+                        </div>
+                        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.2); font-size: 0.85rem;">
+                            <p>Sessions: <strong id="learningSessions">0</strong></p>
+                            <p>Temps: <strong id="learningTotalTime">0h 00min</strong></p>
+                        </div>
+                    </div>
                 </div>
                 <div class="course-content">
                     <div class="video-container">
@@ -2329,11 +2345,29 @@
         let totalStudyTime = 0;
         let isRunning = false;
         
+        // Timer pour la page timer principale
         function updateTimerDisplay() {
             const minutes = Math.floor(timeLeft / 60);
             const seconds = timeLeft % 60;
             document.getElementById('timerDisplay').textContent = 
                 `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        }
+        
+        // Timer intégré dans learning interface
+        let learningTimerInterval = null;
+        let learningTimeLeft = 25 * 60;
+        let learningSessions = 0;
+        let learningTotalTime = 0;
+        let learningIsRunning = false;
+        
+        function updateLearningTimerDisplay() {
+            const minutes = Math.floor(learningTimeLeft / 60);
+            const seconds = learningTimeLeft % 60;
+            const display = document.getElementById('learningTimerDisplay');
+            if (display) {
+                display.textContent = 
+                    `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            }
         }
         
         document.getElementById('startTimer').onclick = function() {
@@ -2372,6 +2406,60 @@
             timeLeft = 25 * 60;
             updateTimerDisplay();
         };
+        
+        // Event listeners pour le timer dans learning interface
+        setTimeout(() => {
+            const learningStartBtn = document.getElementById('learningStartTimer');
+            const learningPauseBtn = document.getElementById('learningPauseTimer');
+            const learningResetBtn = document.getElementById('learningResetTimer');
+            
+            if (learningStartBtn) {
+                learningStartBtn.onclick = function() {
+                    if (!learningIsRunning) {
+                        learningIsRunning = true;
+                        learningTimerInterval = setInterval(() => {
+                            if (learningTimeLeft > 0) {
+                                learningTimeLeft--;
+                                updateLearningTimerDisplay();
+                            } else {
+                                clearInterval(learningTimerInterval);
+                                learningIsRunning = false;
+                                learningSessions++;
+                                learningTotalTime += 25;
+                                const sessionsEl = document.getElementById('learningSessions');
+                                const totalTimeEl = document.getElementById('learningTotalTime');
+                                if (sessionsEl) sessionsEl.textContent = learningSessions;
+                                if (totalTimeEl) {
+                                    totalTimeEl.textContent = 
+                                        `${Math.floor(learningTotalTime / 60)}h ${learningTotalTime % 60}min`;
+                                }
+                                alert('🎉 Session terminée ! Prenez une pause de 5 minutes.');
+                                learningTimeLeft = 25 * 60;
+                                updateLearningTimerDisplay();
+                            }
+                        }, 1000);
+                    }
+                };
+            }
+            
+            if (learningPauseBtn) {
+                learningPauseBtn.onclick = function() {
+                    if (learningIsRunning) {
+                        clearInterval(learningTimerInterval);
+                        learningIsRunning = false;
+                    }
+                };
+            }
+            
+            if (learningResetBtn) {
+                learningResetBtn.onclick = function() {
+                    clearInterval(learningTimerInterval);
+                    learningIsRunning = false;
+                    learningTimeLeft = 25 * 60;
+                    updateLearningTimerDisplay();
+                };
+            }
+        }, 500);
         
         // Update progress on home page for logged-in users
         function updateProgress() {
