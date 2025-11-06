@@ -1171,6 +1171,16 @@
                 max-width: 800px;
                 padding: 2rem;
             }
+            .landing-section > div[style*="grid-template-columns"] {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+            }
+            .landing-section h2 {
+                font-size: 1.5rem !important;
+            }
+            .landing-section p {
+                font-size: 0.95rem !important;
+            }
         }
     </style>
 </head>
@@ -1230,8 +1240,29 @@
 
             <!-- Section Certificats -->
             <section class="landing-section">
-                <div class="certificate-showcase">
-                    <img src="images/certificate.jpg" alt="Certificats BYS Academy" style="max-width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: center;">
+                    <div class="certificate-showcase">
+                        <img src="images/certificate.jpg" alt="Certificats BYS Academy" style="max-width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                    </div>
+                    <div style="padding: 1rem;">
+                        <h2 style="color: var(--ihec-blue); margin-bottom: 1.5rem; font-size: 1.8rem;">🎓 L'Excellence de l'IHEC Carthage</h2>
+                        <p style="line-height: 1.8; color: #333; margin-bottom: 1rem;">
+                            <strong>L'IHEC Carthage</strong> est la <strong>plus prestigieuse école de commerce en Tunisie</strong>. 
+                            Pionnière dans l'innovation, elle est toujours à l'avant-garde des nouvelles technologies dans le domaine 
+                            de la finance et du management.
+                        </p>
+                        <p style="line-height: 1.8; color: #333; margin-bottom: 1rem;">
+                            Notre institution se distingue par son excellence académique et sa capacité à former les leaders de demain, 
+                            en intégrant constamment les dernières avancées technologiques et pédagogiques.
+                        </p>
+                        <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 1.5rem; border-radius: 10px; border-left: 4px solid var(--hecfa-yellow); margin-top: 1.5rem;">
+                            <p style="line-height: 1.8; color: #1e40af; font-style: italic; margin: 0;">
+                                💡 <strong>Notre Vision :</strong> Les étudiants de Harvard ont créé une interface pour que tous les étudiants 
+                                du monde en bénéficient. Et pourquoi pas nous, IHÉCiens, créer une interface pour les étudiants de l'IHEC 
+                                et de la Tunisie pour qu'ils boostent leurs skills et se développent personnellement ?
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -1303,46 +1334,6 @@
 
         <div id="login" class="page">
             <div class="auth-container">
-                <div style="display: flex; justify-content: center; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem;">
-                    <svg style="height: 70px; width: auto;" viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg">
-                        <rect fill="#1e3a8a" width="200" height="280"/>
-                        <g transform="translate(100, 90)">
-                            <rect fill="#ffffff" x="-3" y="0" width="6" height="75" rx="1.5"/>
-                            <path fill="none" stroke="#ffffff" stroke-width="2.5" d="M -3,15 Q -18,25 -14,40 Q -10,50 -3,58"/>
-                            <path fill="none" stroke="#ffffff" stroke-width="2.5" d="M 3,15 Q 18,25 14,40 Q 10,50 3,58"/>
-                            <circle fill="#ffffff" cx="-14" cy="20" r="2"/>
-                            <circle fill="#ffffff" cx="14" cy="20" r="2"/>
-                            <path fill="#ffffff" d="M -3,-8 Q -28,-15 -32,-8 Q -35,-2 -30,3 Q -25,6 -3,2 Z"/>
-                            <path fill="#ffffff" d="M 3,-8 Q 28,-15 32,-8 Q 35,-2 30,3 Q 25,6 3,2 Z"/>
-                        </g>
-                        <ellipse cx="100" cy="130" rx="48" ry="52" fill="none" stroke="#ffffff" stroke-width="2.5"/>
-                        <text fill="#ffffff" x="100" y="210" font-family="serif" font-size="38" font-weight="bold" text-anchor="middle">IHEC</text>
-                        <text fill="#ffffff" x="100" y="238" font-family="serif" font-size="16" text-anchor="middle" letter-spacing="6">CARTHAGE</text>
-                    </svg>
-                    
-                    <svg style="height: 70px; width: auto;" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
-                        <g transform="translate(110, 65)">
-                            <ellipse fill="#ffd700" cx="0" cy="18" rx="32" ry="22"/>
-                            <ellipse fill="#ffd700" cx="0" cy="-3" rx="18" ry="16"/>
-                            <path fill="#ffd700" d="M -14,-14 Q -23,-22 -19,-26 Q -17,-24 -14,-18 Z"/>
-                            <path fill="#ffd700" d="M 14,-14 Q 23,-22 19,-26 Q 17,-24 14,-18 Z"/>
-                            <rect fill="#ffd700" x="-22" y="32" width="7" height="18" rx="2"/>
-                            <rect fill="#ffd700" x="-7" y="32" width="7" height="18" rx="2"/>
-                            <rect fill="#ffd700" x="0" y="32" width="7" height="18" rx="2"/>
-                            <rect fill="#ffd700" x="15" y="32" width="7" height="18" rx="2"/>
-                            <circle cx="-7" cy="-3" r="1.8" fill="#1e40af"/>
-                            <circle cx="7" cy="-3" r="1.8" fill="#1e40af"/>
-                        </g>
-                        <g transform="translate(110, 108)">
-                            <ellipse fill="#1e40af" cx="0" cy="2" rx="26" ry="16" opacity="0.75"/>
-                            <circle fill="#1e40af" cx="0" cy="-12" r="13" opacity="0.75"/>
-                        </g>
-                        <text x="110" y="165" font-family="'Arial Black', sans-serif" font-size="36" font-weight="900" text-anchor="middle">
-                            <tspan fill="#1e40af">HEC'</tspan><tspan fill="#ffd700">FA</tspan>
-                        </text>
-                        <text fill="#1e40af" x="110" y="185" font-family="Arial" font-size="12" text-anchor="middle" letter-spacing="1.5">HEC Finance Academy</text>
-                    </svg>
-                </div>
                 <h2>🎓 BYS Academy</h2>
                 <p>Connexion à votre compte</p>
                 <div class="error-message" id="loginError"></div>
@@ -1369,46 +1360,6 @@
 
         <div id="register" class="page">
             <div class="auth-container">
-                <div style="display: flex; justify-content: center; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem;">
-                    <svg style="height: 70px; width: auto;" viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg">
-                        <rect fill="#1e3a8a" width="200" height="280"/>
-                        <g transform="translate(100, 90)">
-                            <rect fill="#ffffff" x="-3" y="0" width="6" height="75" rx="1.5"/>
-                            <path fill="none" stroke="#ffffff" stroke-width="2.5" d="M -3,15 Q -18,25 -14,40 Q -10,50 -3,58"/>
-                            <path fill="none" stroke="#ffffff" stroke-width="2.5" d="M 3,15 Q 18,25 14,40 Q 10,50 3,58"/>
-                            <circle fill="#ffffff" cx="-14" cy="20" r="2"/>
-                            <circle fill="#ffffff" cx="14" cy="20" r="2"/>
-                            <path fill="#ffffff" d="M -3,-8 Q -28,-15 -32,-8 Q -35,-2 -30,3 Q -25,6 -3,2 Z"/>
-                            <path fill="#ffffff" d="M 3,-8 Q 28,-15 32,-8 Q 35,-2 30,3 Q 25,6 3,2 Z"/>
-                        </g>
-                        <ellipse cx="100" cy="130" rx="48" ry="52" fill="none" stroke="#ffffff" stroke-width="2.5"/>
-                        <text fill="#ffffff" x="100" y="210" font-family="serif" font-size="38" font-weight="bold" text-anchor="middle">IHEC</text>
-                        <text fill="#ffffff" x="100" y="238" font-family="serif" font-size="16" text-anchor="middle" letter-spacing="6">CARTHAGE</text>
-                    </svg>
-                    
-                    <svg style="height: 70px; width: auto;" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
-                        <g transform="translate(110, 65)">
-                            <ellipse fill="#ffd700" cx="0" cy="18" rx="32" ry="22"/>
-                            <ellipse fill="#ffd700" cx="0" cy="-3" rx="18" ry="16"/>
-                            <path fill="#ffd700" d="M -14,-14 Q -23,-22 -19,-26 Q -17,-24 -14,-18 Z"/>
-                            <path fill="#ffd700" d="M 14,-14 Q 23,-22 19,-26 Q 17,-24 14,-18 Z"/>
-                            <rect fill="#ffd700" x="-22" y="32" width="7" height="18" rx="2"/>
-                            <rect fill="#ffd700" x="-7" y="32" width="7" height="18" rx="2"/>
-                            <rect fill="#ffd700" x="0" y="32" width="7" height="18" rx="2"/>
-                            <rect fill="#ffd700" x="15" y="32" width="7" height="18" rx="2"/>
-                            <circle cx="-7" cy="-3" r="1.8" fill="#1e40af"/>
-                            <circle cx="7" cy="-3" r="1.8" fill="#1e40af"/>
-                        </g>
-                        <g transform="translate(110, 108)">
-                            <ellipse fill="#1e40af" cx="0" cy="2" rx="26" ry="16" opacity="0.75"/>
-                            <circle fill="#1e40af" cx="0" cy="-12" r="13" opacity="0.75"/>
-                        </g>
-                        <text x="110" y="165" font-family="'Arial Black', sans-serif" font-size="36" font-weight="900" text-anchor="middle">
-                            <tspan fill="#1e40af">HEC'</tspan><tspan fill="#ffd700">FA</tspan>
-                        </text>
-                        <text fill="#1e40af" x="110" y="185" font-family="Arial" font-size="12" text-anchor="middle" letter-spacing="1.5">HEC Finance Academy</text>
-                    </svg>
-                </div>
                 <h2>🎓 BYS Academy</h2>
                 <p>Créer votre compte</p>
                 <div class="error-message" id="registerError"></div>
