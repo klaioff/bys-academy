@@ -1941,7 +1941,7 @@
         let currentModule = null;
         let isGuestMode = false;
 
-        function showPage(page) {
+        window.showPage = function(page) {
             document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
             document.getElementById(page).classList.add('active');
         }
@@ -2474,8 +2474,8 @@
         }
         
         // Call updateProgress when showing home page
-        const originalShowPage = showPage;
-        showPage = function(page) {
+        const originalShowPage = window.showPage;
+        window.showPage = function(page) {
             originalShowPage(page);
             if (page === 'home') {
                 updateProgress();
