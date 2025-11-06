@@ -683,210 +683,6 @@
             background: rgba(244, 67, 54, 0.1);
         }
         
-        /* Survey Styles */
-        .survey-options {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        .survey-btn {
-            background: white;
-            border: 3px solid #e0e0e0;
-            border-radius: 15px;
-            padding: 2rem;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-align: center;
-        }
-        .survey-btn:hover {
-            border-color: var(--ihec-blue);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        }
-        .survey-btn h3 {
-            margin: 1rem 0 0.5rem 0;
-            color: var(--ihec-blue);
-            font-size: 1.5rem;
-        }
-        .survey-btn p {
-            color: #666;
-            margin: 0;
-        }
-
-        /* Landing Page Styles */
-        .landing-hero {
-            text-align: center;
-            padding: 3rem 1.5rem;
-            background: linear-gradient(135deg, var(--ihec-blue), var(--hecfa-blue));
-            color: white;
-            border-radius: 20px;
-            margin-bottom: 2rem;
-        }
-        .landing-hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        .hero-subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        .landing-section {
-            background: white;
-            padding: 2rem 1.5rem;
-            border-radius: 15px;
-            margin-bottom: 2rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        .landing-section h2 {
-            text-align: center;
-            color: var(--ihec-blue);
-            margin-bottom: 2rem;
-            font-size: 2rem;
-        }
-        .certificate-showcase {
-            text-align: center;
-        }
-        .testimonials {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-        .testimonial-card {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 10px;
-            border-left: 4px solid var(--hecfa-yellow);
-        }
-        .testimonial-text {
-            font-style: italic;
-            color: #555;
-            margin-bottom: 1rem;
-            line-height: 1.6;
-        }
-        .testimonial-author {
-            display: flex;
-            flex-direction: column;
-            gap: 0.25rem;
-        }
-        .testimonial-author strong {
-            color: var(--ihec-blue);
-            font-size: 1.1rem;
-        }
-        .testimonial-author span {
-            color: #888;
-            font-size: 0.9rem;
-        }
-        .objectives-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-        .objective-card {
-            text-align: center;
-            padding: 2rem 1.5rem;
-            background: #f8f9fa;
-            border-radius: 10px;
-            transition: transform 0.3s;
-        }
-        .objective-card:hover {
-            transform: translateY(-5px);
-        }
-        .objective-icon {
-            font-size: 3rem;
-            display: block;
-            margin-bottom: 1rem;
-        }
-        .objective-card h3 {
-            color: var(--ihec-blue);
-            margin-bottom: 0.5rem;
-        }
-        .objective-card p {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        /* Chat Widget */
-        .chat-widget {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 9999;
-        }
-        .chat-button {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--ihec-blue), var(--hecfa-blue));
-            color: white;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            transition: transform 0.3s;
-        }
-        .chat-button:hover {
-            transform: scale(1.1);
-        }
-        .chat-box {
-            display: none;
-            position: absolute;
-            bottom: 80px;
-            right: 0;
-            width: 350px;
-            max-height: 500px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            overflow: hidden;
-        }
-        .chat-box.open {
-            display: flex;
-            flex-direction: column;
-        }
-        .chat-header {
-            background: linear-gradient(135deg, var(--ihec-blue), var(--hecfa-blue));
-            color: white;
-            padding: 1rem;
-            font-weight: 600;
-        }
-        .chat-messages {
-            flex: 1;
-            padding: 1rem;
-            overflow-y: auto;
-            max-height: 300px;
-        }
-        .chat-message {
-            background: #f0f0f0;
-            padding: 0.75rem;
-            border-radius: 10px;
-            margin-bottom: 0.5rem;
-        }
-        .chat-message.admin {
-            background: #e3f2fd;
-        }
-        .chat-input-area {
-            padding: 1rem;
-            border-top: 1px solid #e0e0e0;
-            display: flex;
-            gap: 0.5rem;
-        }
-        .chat-input {
-            flex: 1;
-            padding: 0.75rem;
-            border: 1px solid #ddd;
-            border-radius: 20px;
-            outline: none;
-        }
-        .chat-send-btn {
-            background: var(--ihec-blue);
-            color: white;
-            border: none;
-            padding: 0.75rem 1.25rem;
-            border-radius: 20px;
-            cursor: pointer;
-        }
-
         /* Leaderboard */
         
         /* Study Timer */
@@ -927,66 +723,6 @@
         }
         .timer-btn:hover {
             background: white;
-            color: var(--ihec-blue);
-        }
-        
-        /* Profile Styles */
-        .profile-section {
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        .profile-section:last-child {
-            border-bottom: none;
-        }
-        .profile-section h3 {
-            color: var(--ihec-blue);
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-        .profile-info {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1rem;
-        }
-        .info-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem;
-            background: #f8f9fa;
-            border-radius: 8px;
-        }
-        .info-item strong {
-            color: #333;
-        }
-        .info-item span {
-            color: #666;
-        }
-
-        /* Admin Styles */
-        .admin-section {
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background: #f8f9fa;
-            border-radius: 10px;
-        }
-        .admin-section h3 {
-            color: var(--ihec-blue);
-            margin-bottom: 1rem;
-        }
-        .requests-list {
-            max-height: 400px;
-            overflow-y: auto;
-        }
-        .request-item {
-            background: white;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-bottom: 0.5rem;
-            border-left: 4px solid var(--hecfa-yellow);
-        }
-        .request-item strong {
             color: var(--ihec-blue);
         }
         
@@ -1177,7 +913,134 @@
 <body>
     <nav class="navbar" id="navbar">
         <div class="logo">
-            <h2>🎓 BYS Academy</h2>
+            <div class="logo-container">
+                <!-- Logo IHEC Carthage -->
+                <svg class="logo-ihec" viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg">
+                    <rect fill="#1e3a8a" width="200" height="280"/>
+                    
+                    <!-- Caducée médical -->
+                    <g transform="translate(100, 90)">
+                        <!-- Bâton central -->
+                        <rect fill="#ffffff" x="-3" y="0" width="6" height="75" rx="1.5"/>
+                        
+                        <!-- Serpents entrelacés -->
+                        <path fill="none" stroke="#ffffff" stroke-width="2.5" 
+                              d="M -3,15 Q -18,25 -14,40 Q -10,50 -3,58"/>
+                        <path fill="none" stroke="#ffffff" stroke-width="2.5" 
+                              d="M 3,15 Q 18,25 14,40 Q 10,50 3,58"/>
+                        
+                        <!-- Têtes des serpents -->
+                        <circle fill="#ffffff" cx="-14" cy="20" r="2"/>
+                        <circle fill="#ffffff" cx="14" cy="20" r="2"/>
+                        
+                        <!-- Ailes en haut -->
+                        <path fill="#ffffff" d="M -3,-8 Q -28,-15 -32,-8 Q -35,-2 -30,3 Q -25,6 -3,2 Z"/>
+                        <path fill="#ffffff" d="M 3,-8 Q 28,-15 32,-8 Q 35,-2 30,3 Q 25,6 3,2 Z"/>
+                    </g>
+                    
+                    <!-- Couronne de lauriers -->
+                    <ellipse cx="100" cy="130" rx="48" ry="52" 
+                             fill="none" stroke="#ffffff" stroke-width="2.5"/>
+                    
+                    <!-- Feuilles de laurier gauche -->
+                    <path fill="none" stroke="#ffffff" stroke-width="2" 
+                          d="M 58,110 Q 48,115 50,122"/>
+                    <path fill="none" stroke="#ffffff" stroke-width="2" 
+                          d="M 56,125 Q 46,130 48,137"/>
+                    
+                    <!-- Feuilles de laurier droite -->
+                    <path fill="none" stroke="#ffffff" stroke-width="2" 
+                          d="M 142,110 Q 152,115 150,122"/>
+                    <path fill="none" stroke="#ffffff" stroke-width="2" 
+                          d="M 144,125 Q 154,130 152,137"/>
+                    
+                    <!-- Texte IHEC -->
+                    <text fill="#ffffff" x="100" y="210" 
+                          font-family="serif" font-size="38" font-weight="bold" 
+                          text-anchor="middle">IHEC</text>
+                    
+                    <!-- Texte CARTHAGE -->
+                    <text fill="#ffffff" x="100" y="238" 
+                          font-family="serif" font-size="16" font-weight="normal" 
+                          text-anchor="middle" letter-spacing="6">CARTHAGE</text>
+                </svg>
+                
+                <!-- Logo HEC'FA -->
+                <svg class="logo-hecfa" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Taureau jaune (dominant, victorieux) -->
+                    <g transform="translate(110, 65)">
+                        <!-- Corps -->
+                        <ellipse fill="#ffd700" cx="0" cy="18" rx="32" ry="22"/>
+                        
+                        <!-- Tête -->
+                        <ellipse fill="#ffd700" cx="0" cy="-3" rx="18" ry="16"/>
+                        
+                        <!-- Cornes -->
+                        <path fill="#ffd700" d="M -14,-14 Q -23,-22 -19,-26 Q -17,-24 -14,-18 Z"/>
+                        <path fill="#ffd700" d="M 14,-14 Q 23,-22 19,-26 Q 17,-24 14,-18 Z"/>
+                        
+                        <!-- Pattes avant gauche -->
+                        <rect fill="#ffd700" x="-22" y="32" width="7" height="18" rx="2"/>
+                        <!-- Pattes avant droite -->
+                        <rect fill="#ffd700" x="-7" y="32" width="7" height="18" rx="2"/>
+                        <!-- Pattes arrière gauche -->
+                        <rect fill="#ffd700" x="0" y="32" width="7" height="18" rx="2"/>
+                        <!-- Pattes arrière droite -->
+                        <rect fill="#ffd700" x="15" y="32" width="7" height="18" rx="2"/>
+                        
+                        <!-- Queue -->
+                        <path fill="none" stroke="#ffd700" stroke-width="3" 
+                              d="M 28,20 Q 36,18 40,22" stroke-linecap="round"/>
+                        
+                        <!-- Yeux -->
+                        <circle cx="-7" cy="-3" r="1.8" fill="#1e40af"/>
+                        <circle cx="7" cy="-3" r="1.8" fill="#1e40af"/>
+                        
+                        <!-- Narines -->
+                        <circle cx="-3" cy="3" r="1" fill="#1e40af" opacity="0.6"/>
+                        <circle cx="3" cy="3" r="1" fill="#1e40af" opacity="0.6"/>
+                        
+                        <!-- Détails musculaires (traits sur le corps) -->
+                        <path fill="none" stroke="#f4c430" stroke-width="1" opacity="0.3"
+                              d="M -8,15 Q -5,18 -2,15"/>
+                        <path fill="none" stroke="#f4c430" stroke-width="1" opacity="0.3"
+                              d="M 2,15 Q 5,18 8,15"/>
+                    </g>
+                    
+                    <!-- Lion bleu (en dessous, vaincu) -->
+                    <g transform="translate(110, 108)">
+                        <!-- Corps du lion couché -->
+                        <ellipse fill="#1e40af" cx="0" cy="2" rx="26" ry="16" opacity="0.75"/>
+                        
+                        <!-- Tête -->
+                        <circle fill="#1e40af" cx="0" cy="-12" r="13" opacity="0.75"/>
+                        
+                        <!-- Crinière stylisée (traits radiants) -->
+                        <path fill="none" stroke="#1e40af" stroke-width="2.5" opacity="0.75"
+                              d="M -13,-18 L -16,-13 M -8,-22 L -10,-15 M 0,-24 L 0,-17 M 8,-22 L 10,-15 M 13,-18 L 16,-13"/>
+                        
+                        <!-- Pattes visibles -->
+                        <ellipse fill="#1e40af" cx="-10" cy="15" rx="4" ry="6" opacity="0.75"/>
+                        <ellipse fill="#1e40af" cx="10" cy="15" rx="4" ry="6" opacity="0.75"/>
+                        
+                        <!-- Ombre sous le lion -->
+                        <ellipse fill="#1e40af" cx="0" cy="20" rx="20" ry="4" opacity="0.3"/>
+                    </g>
+                    
+                    <!-- Texte HEC'FA -->
+                    <text x="110" y="165" 
+                          font-family="'Arial Black', 'Arial Bold', sans-serif" 
+                          font-size="36" font-weight="900" text-anchor="middle">
+                        <tspan fill="#1e40af">HEC'</tspan><tspan fill="#ffd700">FA</tspan>
+                    </text>
+                    
+                    <!-- Sous-titre -->
+                    <text fill="#1e40af" x="110" y="185" 
+                          font-family="Arial, sans-serif" font-size="12" 
+                          text-anchor="middle" letter-spacing="1.5">HEC Finance Academy</text>
+                </svg>
+            </div>
+            <span>BYS Academy</span>
         </div>
         <button class="menu-toggle" id="menuToggle">
             <span></span>
@@ -1185,9 +1048,12 @@
             <span></span>
         </button>
         <ul class="nav-links" id="navLinks">
-            <li><a id="navHome">🏠 Accueil</a></li>
-            <li><a id="navFormations">📚 Formations</a></li>
-            <li><a id="navProfil">👤 Profil</a></li>
+            <li><a id="navHome">Accueil</a></li>
+            <li><a id="navFormations">Formations</a></li>
+            <li><a id="navDiscussions">Discussions</a></li>
+            <li><a id="navBadges">🏆 Badges</a></li>
+            <li><a id="navTimer">⏱️ Timer</a></li>
+            <li><a id="navRequetes">Requêtes</a></li>
         </ul>
         <div class="user-info">
             <span id="username"></span>
@@ -1196,112 +1062,7 @@
     </nav>
 
     <div class="container">
-        <!-- SONDAGE INITIAL -->
-        <div id="survey" class="page active">
-            <div class="auth-container">
-                <h2>🎯 Bienvenue sur BYS Academy</h2>
-                <p style="color: #666; margin-bottom: 2rem;">Pour mieux vous servir, quel domaine vous intéresse le plus ?</p>
-                <div class="survey-options">
-                    <button class="survey-btn" onclick="selectInterest('IT')">
-                        <span style="font-size: 3rem;">💻</span>
-                        <h3>IT</h3>
-                        <p>Informatique & Technologies</p>
-                    </button>
-                    <button class="survey-btn" onclick="selectInterest('Finance')">
-                        <span style="font-size: 3rem;">💰</span>
-                        <h3>Finance</h3>
-                        <p>Finance & Comptabilité</p>
-                    </button>
-                    <button class="survey-btn" onclick="selectInterest('Soft Skills')">
-                        <span style="font-size: 3rem;">🎯</span>
-                        <h3>Soft Skills</h3>
-                        <p>Communication & Leadership</p>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- PAGE HOME (Landing Page) -->
-        <div id="landing" class="page">
-            <div class="landing-hero">
-                <h1>🎓 Bienvenue sur BYS Academy</h1>
-                <p class="hero-subtitle">Boost Your Skills - Let's build together!</p>
-            </div>
-
-            <!-- Section Certificats -->
-            <section class="landing-section">
-                <div class="certificate-showcase">
-                    <img src="images/certificate.jpg" alt="Certificats BYS Academy" style="max-width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-                </div>
-            </section>
-
-            <!-- Section Témoignages -->
-            <section class="landing-section">
-                <h2>💬 Ce que disent nos professeurs</h2>
-                <div class="testimonials">
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">"BYS Academy est une excellente initiative pour accompagner nos étudiants dans leur développement professionnel."</p>
-                        <div class="testimonial-author">
-                            <strong>Dr. Ahmed Mansour</strong>
-                            <span>Professeur de Finance - IHEC Carthage</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">"Une plateforme innovante qui répond aux besoins de formation continue de nos étudiants."</p>
-                        <div class="testimonial-author">
-                            <strong>Dr. Fatma Trabelsi</strong>
-                            <span>Professeur d'Économie - IHEC Carthage</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">"Je recommande vivement BYS Academy pour sa qualité pédagogique et son approche moderne."</p>
-                        <div class="testimonial-author">
-                            <strong>Dr. Mohamed Gharbi</strong>
-                            <span>Professeur de Management - IHEC Carthage</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section Objectifs -->
-            <section class="landing-section objectives">
-                <h2>🎯 Nos Objectifs</h2>
-                <div class="objectives-grid">
-                    <div class="objective-card">
-                        <span class="objective-icon">📚</span>
-                        <h3>Formation Continue</h3>
-                        <p>Offrir des formations de qualité adaptées aux besoins du marché</p>
-                    </div>
-                    <div class="objective-card">
-                        <span class="objective-icon">🤝</span>
-                        <h3>Communauté</h3>
-                        <p>Créer un espace d'échange entre étudiants et professionnels</p>
-                    </div>
-                    <div class="objective-card">
-                        <span class="objective-icon">🏆</span>
-                        <h3>Excellence</h3>
-                        <p>Accompagner chaque étudiant vers la réussite professionnelle</p>
-                    </div>
-                    <div class="objective-card">
-                        <span class="objective-icon">🚀</span>
-                        <h3>Innovation</h3>
-                        <p>Utiliser les meilleures technologies pour l'apprentissage</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Bouton S'inscrire -->
-            <div style="text-align: center; padding: 3rem 0;">
-                <button class="btn-primary" style="padding: 1rem 3rem; font-size: 1.2rem;" onclick="showPage('register')">
-                    📝 S'inscrire Maintenant
-                </button>
-                <p style="margin-top: 1rem; color: #666;">
-                    Déjà membre ? <a href="#" onclick="showPage('login'); return false;" style="color: var(--ihec-blue); font-weight: 600;">Se connecter</a>
-                </p>
-            </div>
-        </div>
-
-        <div id="login" class="page">
+        <div id="login" class="page active">
             <div class="auth-container">
                 <div style="display: flex; justify-content: center; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem;">
                     <svg style="height: 70px; width: auto;" viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg">
@@ -1511,6 +1272,19 @@
             <div class="formations-grid" id="formationsGrid"></div>
         </div>
 
+        <div id="discussions" class="page">
+            <div class="card">
+                <h2>💬 Forum de Discussions</h2>
+                <p style="margin-bottom: 2rem;">Partagez vos idées et posez vos questions</p>
+                <div class="form-group">
+                    <textarea id="newDiscussion" placeholder="Posez une question..." style="min-height: 100px;"></textarea>
+                </div>
+                <button class="btn-primary" id="postDiscussion">Publier</button>
+            </div>
+            <div class="loading" id="discussionsLoading">Chargement...</div>
+            <div id="discussionsList"></div>
+        </div>
+
         <div id="formation-details" class="page">
             <div class="card">
                 <div id="formation-details-content"></div>
@@ -1570,143 +1344,6 @@
         </div>
         
         <!-- Page Badges & Gamification -->
-        <!-- Page Profil -->
-        <div id="profil" class="page">
-            <div class="card">
-                <h2>👤 Mon Profil</h2>
-                
-                <!-- Informations personnelles -->
-                <div class="profile-section">
-                    <h3>📋 Informations Personnelles</h3>
-                    <div class="profile-info">
-                        <div class="info-item">
-                            <strong>Nom :</strong>
-                            <span id="profileName">-</span>
-                        </div>
-                        <div class="info-item">
-                            <strong>Email :</strong>
-                            <span id="profileEmail">-</span>
-                        </div>
-                        <div class="info-item">
-                            <strong>Centre d'intérêt :</strong>
-                            <span id="profileInterest">-</span>
-                        </div>
-                        <div class="info-item">
-                            <strong>Membre depuis :</strong>
-                            <span id="profileJoinDate">-</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Progression -->
-                <div class="profile-section">
-                    <h3>📊 Ma Progression</h3>
-                    <div class="stats-grid">
-                        <div class="stat-card">
-                            <div class="stat-value" id="profileCoursesCompleted">0</div>
-                            <div class="stat-label">Cours complétés</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-value" id="profileStudyHours">0</div>
-                            <div class="stat-label">Heures d'étude</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-value" id="profileQuizScore">0%</div>
-                            <div class="stat-label">Moy. Quiz</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-value" id="profileStreak">0</div>
-                            <div class="stat-label">Jours de suite</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Badges -->
-                <div class="profile-section">
-                    <h3>🏆 Mes Badges</h3>
-                    <div class="badges-container">
-                        <div class="badge">
-                            <div class="badge-icon">🎯</div>
-                            <div class="badge-title">Premier Pas</div>
-                            <small>S'inscrire à une formation</small>
-                        </div>
-                        <div class="badge locked">
-                            <div class="badge-icon">📚</div>
-                            <div class="badge-title">Étudiant Assidu</div>
-                            <small>Terminer 3 formations</small>
-                        </div>
-                        <div class="badge locked">
-                            <div class="badge-icon">💡</div>
-                            <div class="badge-title">Génie</div>
-                            <small>Score parfait à un quiz</small>
-                        </div>
-                        <div class="badge locked">
-                            <div class="badge-icon">🔥</div>
-                            <div class="badge-title">En Feu</div>
-                            <small>7 jours consécutifs</small>
-                        </div>
-                        <div class="badge locked">
-                            <div class="badge-icon">⭐</div>
-                            <div class="badge-title">Superstar</div>
-                            <small>Top 10 du classement</small>
-                        </div>
-                        <div class="badge locked">
-                            <div class="badge-icon">👑</div>
-                            <div class="badge-title">Champion</div>
-                            <small>Top 1 du classement</small>
-                        </div>
-                        <div class="badge locked">
-                            <div class="badge-icon">🎓</div>
-                            <div class="badge-title">Diplômé</div>
-                            <small>Obtenir 5 certificats</small>
-                        </div>
-                        <div class="badge locked">
-                            <div class="badge-icon">💬</div>
-                            <div class="badge-title">Communicateur</div>
-                            <small>50 messages postés</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Page Admin -->
-        <div id="admin" class="page">
-            <div class="card">
-                <h2>⚙️ Tableau de Bord Admin</h2>
-                <p style="color: #666; margin-bottom: 2rem;">Bienvenue dans l'interface administrateur</p>
-                
-                <div class="admin-section">
-                    <h3>📊 Statistiques Globales</h3>
-                    <div class="stats-grid">
-                        <div class="stat-card">
-                            <div class="stat-value" id="adminTotalUsers">0</div>
-                            <div class="stat-label">Utilisateurs</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-value" id="adminTotalCourses">0</div>
-                            <div class="stat-label">Formations</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-value" id="adminActiveUsers">0</div>
-                            <div class="stat-label">Actifs ce mois</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-value" id="adminPendingRequests">0</div>
-                            <div class="stat-label">Requêtes en attente</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="admin-section">
-                    <h3>💬 Requêtes Récentes</h3>
-                    <div id="adminRequestsList" class="requests-list">
-                        <p style="color: #999; text-align: center;">Chargement...</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
         <div id="badges" class="page">
             <div class="card">
                 <h2>🏆 Badges & Réalisations</h2>
@@ -1792,44 +1429,19 @@
     </div>
     
     <!-- Footer -->
-    <!-- Chat Widget -->
-    <div class="chat-widget">
-        <button class="chat-button" id="chatToggle" onclick="toggleChat()">💬</button>
-        <div class="chat-box" id="chatBox">
-            <div class="chat-header">
-                <span>💬 Support & Requêtes</span>
-            </div>
-            <div class="chat-messages" id="chatMessages">
-                <div class="chat-message admin">
-                    <strong>Admin</strong>
-                    <p>Bonjour ! Comment puis-je vous aider ?</p>
-                </div>
-            </div>
-            <div class="chat-input-area">
-                <input type="text" class="chat-input" id="chatInput" placeholder="Votre message..." onkeypress="if(event.key==='Enter') sendChatMessage()">
-                <button class="chat-send-btn" onclick="sendChatMessage()">📤</button>
-            </div>
-        </div>
-    </div>
-
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
                 <h3>🎓 BYS Academy</h3>
                 <p>Boost Your Skills - Let's build together!</p>
                 <p style="margin-top: 1rem;">Plateforme de formation dédiée aux étudiants de l'IHEC Carthage et HEC Finance Academy.</p>
-                <!-- Logos dans le footer -->
-                <div style="display: flex; gap: 1rem; margin-top: 1.5rem; align-items: center;">
-                    <img src="images/logo_ihec.png" alt="IHEC Carthage" style="height: 60px; width: auto;">
-                    <img src="images/logo_hecfa.png" alt="HEC'FA" style="height: 60px; width: auto;">
-                </div>
             </div>
             
             <div class="footer-section">
-                <h3>📚 Menu</h3>
-                <a href="#" onclick="showPage('home'); return false;">Accueil</a>
-                <a href="#" onclick="showPage('formations'); return false;">Formations</a>
-                <a href="#" onclick="showPage('profil'); return false;">Profil</a>
+                <h3>📚 Formations</h3>
+                <a href="#" onclick="showPage('formations'); return false;">Nos Formations</a>
+                <a href="#" onclick="showPage('badges'); return false;">Badges</a>
+                <a href="#" onclick="showPage('timer'); return false;">Chronomètre</a>
             </div>
             
             <div class="footer-section">
@@ -1996,7 +1608,6 @@
                         document.getElementById('navbar').classList.add('show');
                         showPage('home');
                         loadFormations();
-                        checkAdmin(); // Vérifier si admin
                     } else {
                         console.error('Document utilisateur non trouvé');
                         await signOut(auth);
@@ -2010,12 +1621,7 @@
                     currentUser = null;
                     userData = null;
                     document.getElementById('navbar').classList.remove('show');
-                    // Vérifier si l'utilisateur a déjà fait le sondage
-                    if (localStorage.getItem('surveyCompleted')) {
-                        showPage('landing');
-                    } else {
-                        showPage('survey');
-                    }
+                    showPage('login');
                 }
             }
         });
@@ -2095,145 +1701,18 @@
         document.getElementById('goToLogin').onclick = () => showPage('login');
         document.getElementById('navHome').onclick = () => showPage('home');
         document.getElementById('navFormations').onclick = () => { showPage('formations'); loadFormations(); };
-        document.getElementById('navProfil').onclick = () => { 
-            showPage('profil'); 
-            loadProfileData(); 
-        };
-        
-        // Fonction pour le sondage
-        window.selectInterest = function(interest) {
-            localStorage.setItem('userInterest', interest);
-            localStorage.setItem('surveyCompleted', 'true');
-            if (userData) {
-                userData.interest = interest;
-                // Sauvegarder dans Firebase si connecté
-                if (currentUser && !isGuestMode) {
-                    setDoc(doc(db, 'users', currentUser.uid), { interest }, { merge: true });
-                }
-            }
-            showPage('landing');
-        }
-
-        // Fonction toggle chat
-        window.toggleChat = function() {
-            const chatBox = document.getElementById('chatBox');
-            chatBox.classList.toggle('open');
-        }
-
-        // Fonction envoyer message chat
-        window.sendChatMessage = async function() {
-            const input = document.getElementById('chatInput');
-            const message = input.value.trim();
-            
-            if (!message) return;
-            
+        document.getElementById('navDiscussions').onclick = () => { showPage('discussions'); loadDiscussions(); };
+        document.getElementById('navBadges').onclick = () => showPage('badges');
+        document.getElementById('navTimer').onclick = () => showPage('timer');
+        document.getElementById('navRequetes').onclick = () => { 
             if (isGuestMode) {
-                alert('🔒 Veuillez vous connecter pour envoyer des messages.');
-                return;
+                alert('🔒 Cette fonctionnalité est réservée aux membres inscrits.\n\nInscrivez-vous pour soumettre des requêtes !');
+                showPage('register');
+            } else {
+                showPage('requetes'); 
+                loadRequetes(); 
             }
-            
-            // Ajouter le message à l'interface
-            const messagesDiv = document.getElementById('chatMessages');
-            const messageDiv = document.createElement('div');
-            messageDiv.className = 'chat-message';
-            messageDiv.innerHTML = `<strong>Vous</strong><p>${message}</p>`;
-            messagesDiv.appendChild(messageDiv);
-            messagesDiv.scrollTop = messagesDiv.scrollHeight;
-            
-            // Sauvegarder dans Firebase
-            try {
-                await addDoc(collection(db, 'chat_messages'), {
-                    userId: currentUser.uid,
-                    userName: userData.name || 'Utilisateur',
-                    message: message,
-                    timestamp: serverTimestamp(),
-                    status: 'pending'
-                });
-            } catch (err) {
-                console.error('Erreur envoi message:', err);
-            }
-            
-            input.value = '';
-        }
-
-        // Charger les données du profil
-        window.loadProfileData = async function() {
-            if (!currentUser) return;
-            
-            document.getElementById('profileName').textContent = userData?.name || '-';
-            document.getElementById('profileEmail').textContent = userData?.email || '-';
-            document.getElementById('profileInterest').textContent = userData?.interest || localStorage.getItem('userInterest') || '-';
-            document.getElementById('profileJoinDate').textContent = userData?.createdAt ? new Date(userData.createdAt.seconds * 1000).toLocaleDateString('fr-FR') : '-';
-            
-            // Stats (valeurs par défaut pour l'instant)
-            document.getElementById('profileCoursesCompleted').textContent = userData?.coursesCompleted || '0';
-            document.getElementById('profileStudyHours').textContent = userData?.studyHours || '0';
-            document.getElementById('profileQuizScore').textContent = (userData?.quizScore || 0) + '%';
-            document.getElementById('profileStreak').textContent = userData?.streak || '0';
-        }
-
-        // Vérifier si admin
-        function checkAdmin() {
-            if (currentUser && currentUser.email === 'klaioff118@gmail.com') {
-                // Ajouter un lien admin dans le menu utilisateur
-                const userInfo = document.querySelector('.user-info');
-                if (userInfo && !document.getElementById('adminLink')) {
-                    const adminBtn = document.createElement('button');
-                    adminBtn.id = 'adminLink';
-                    adminBtn.className = 'btn-logout';
-                    adminBtn.textContent = '⚙️ Admin';
-                    adminBtn.style.background = '#ff6b6b';
-                    adminBtn.style.marginRight = '0.5rem';
-                    adminBtn.onclick = () => {
-                        showPage('admin');
-                        loadAdminData();
-                    };
-                    userInfo.insertBefore(adminBtn, userInfo.firstChild);
-                }
-            }
-        }
-
-        // Charger données admin
-        window.loadAdminData = async function() {
-            try {
-                // Total users
-                const usersSnap = await getDocs(collection(db, 'users'));
-                document.getElementById('adminTotalUsers').textContent = usersSnap.size;
-                
-                // Total courses
-                const coursesSnap = await getDocs(collection(db, 'formations'));
-                document.getElementById('adminTotalCourses').textContent = coursesSnap.size;
-                
-                // Active users (simulation)
-                document.getElementById('adminActiveUsers').textContent = Math.floor(usersSnap.size * 0.7);
-                
-                // Pending requests
-                const requestsSnap = await getDocs(query(collection(db, 'chat_messages'), orderBy('timestamp', 'desc'), limit(10)));
-                document.getElementById('adminPendingRequests').textContent = requestsSnap.size;
-                
-                // Liste des requêtes
-                const requestsList = document.getElementById('adminRequestsList');
-                requestsList.innerHTML = '';
-                
-                if (requestsSnap.empty) {
-                    requestsList.innerHTML = '<p style="color: #999; text-align: center;">Aucune requête pour le moment</p>';
-                } else {
-                    requestsSnap.forEach(doc => {
-                        const req = doc.data();
-                        const div = document.createElement('div');
-                        div.className = 'request-item';
-                        div.innerHTML = `
-                            <strong>${req.userName}</strong>
-                            <p style="margin: 0.5rem 0; color: #666;">${req.message}</p>
-                            <small style="color: #999;">${req.timestamp ? new Date(req.timestamp.seconds * 1000).toLocaleString('fr-FR') : 'En attente'}</small>
-                        `;
-                        requestsList.appendChild(div);
-                    });
-                }
-            } catch (err) {
-                console.error('Erreur chargement admin:', err);
-            }
-        }
+        };
         
         // Modal functions
         window.openModal = function(type) {
