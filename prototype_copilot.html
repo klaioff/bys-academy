@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BYS Academy — Prototype</title>
+  <style>
+    :root {
+      --bg: #0f172a;        /* slate-900 */
+      --card: #111827;      /* gray-900 */
+      --text: #e5e7eb;      /* gray-200 */
+      --muted: #9ca3af;     /* gray-400 */
+      --primary: #22c55e;   /* green-500 */
+      --accent: #60a5fa;    /* blue-400 */
+      --danger: #ef4444;    /* red-500 */
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: linear-gradient(135deg, #0b1220 0%, #0f172a 60%);
+      color: var(--text);
+    }
+    header {
+      padding: 24px 16px;
+      border-bottom: 1px solid #1f2937;
+      background: rgba(17,24,39,0.6);
+      backdrop-filter: blur(6px);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .logo {
+      width: 36px; height: 36px; border-radius: 8px;
+      background: conic-gradient(from 180deg, var(--primary), var(--accent), var(--primary));
+      box-shadow: 0 6px 20px rgba(34,197,94,0.35);
+    }
+    .title { font-weight: 700; font-size: 1.1rem; }
+    .subtitle { color: var(--muted); font-size: 0.9rem; }
+
+    .tabs {
+      display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap;
+    }
+    .tab-btn {
+      padding: 10px 14px; border: 1px solid #1f2937; border-radius: 10px;
+      background: #0b1220; color: var(--text); cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .tab-btn[aria-selected="true"] {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(34,197,94,0.15);
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 20px 16px; }
+    .card {
+      background: var(--card);
+      border: 1px solid #1f2937;
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    }
+    .grid {
+      display: grid; gap: 14px;
+    }
+    @media (min-width: 768px) {
+      .grid-2 { grid-template-columns: 1fr 1fr; }
+      .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    }
+    .badge {
+      display: inline-block; padding: 6px 10px; border-radius: 999px;
+      background: rgba(96,165,250,0.15); color: #dbeafe; font-size: 0.8rem;
+      border: 1px solid rgba(96,165,250,0.3);
+    }
+    .btn {
+      padding: 10px 14px; border-radius: 10px; border: 1px solid #1f2937;
+      background: #0b1220; color: var(--text); cursor: pointer;
+    }
+    .btn-primary {
+      border-color: var(--primary);
+      background: linear-gradient(180deg, rgba(34,197,94,0.25), rgba(34,197,94,0.15));
+    }
+    .input, textarea, select {
+      width: 100%; padding: 10px 12px; border-radius: 10px;
+      border: 1px solid #1f2937; background: #0b1220; color: var(--text);
+    }
+    .muted { color: var(--muted); }
+    .section-title { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+    .list { display: grid; gap: 10px; }
+    .list-item { padding: 10px; border-radius: 12px; background: #0b1220; border: 1px solid #1f2937; }
+    .footer { text-align: center; color: var(--muted); padding: 24px; }
+    /* Accessibility focus */
+    .tab-btn:focus, .btn:focus, .input:focus, textarea:focus, select:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    /* Hide non-active panels */
+    .panel { display: none; }
+    .panel.active { display: block; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container brand">
+      <div class="logo" aria-hidden="true"></div>
+      <div>
+        <div class="title">BYS Academy — Boost Your Skills</div>
+        <div class="subtitle">Let’s build together • Semaine Mondiale de l’Entrepreneuriat</div>
+      </div>
+    </div>
+    <div class="container tabs" role="tablist" aria-label="Sections principales">
+      <button class="tab-btn" role="tab" aria-selected="true" aria-controls="tab-formations" id="btn-formations">Formations</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-discussions" id="btn-discussions">Discussions</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-requete" id="btn-requete">Requête</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Formations -->
+    <section id="tab-formations" class="panel active" role="tabpanel" aria-labelledby="btn-formations">
+      <div class="grid grid-2">
+        <div class="card">
+          <div class="section-title">Catalogue</div>
+          <div class="list" id="formations-list">
+            <!-- Généré par JS -->
+          </div>
+        </div>
+        <div class="card">
+          <div class="section-title">Prochaine session en direct</div>
+          <p class="muted">Intégration Live (ex: YouTube/Zoom) — placeholder iframe</p>
+          <div style="aspect-ratio: 16/9; background:#0b1220; border:1px dashed #334155; border-radius:12px; display:flex; align-items:center; justify-content:center;">
+            <span class="muted">Player live — à intégrer plus tard</span>
+          </div>
+          <div style="margin-top:12px;">
+            <button class="btn btn-primary">S’inscrire</button>
+            <button class="btn">Ajouter au calendrier</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Discussions -->
+    <section id="tab-discussions" class="panel" role="tabpanel" aria-labelledby="btn-discussions">
+      <div class="grid grid-2">
+        <div class="card">
+          <div class="section-title">Salon général</div>
+          <div id="messages" class="list" aria-live="polite">
+            <!-- Messages mock -->
+          </div>
+          <div style="margin-top:12px;" aria-label="Poster un message">
+            <label class="muted" for="input-message">Votre message</label>
+            <input id="input-message" class="input" placeholder="Partagez une idée, posez une question..." />
+            <button id="send-message" class="btn btn-primary" style="margin-top:8px;">Envoyer</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="section-title">Canaux</div>
+          <ul class="list">
+            <li class="list-item"><span class="badge">#annonces</span> Mises à jour de l’équipe SME</li>
+            <li class="list-item"><span class="badge">#formations</span> Questions sur le contenu</li>
+            <li class="list-item"><span class="badge">#entraide</span> Aide entre étudiants</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Requête -->
+    <section id="tab-requete" class="panel" role="tabpanel" aria-labelledby="btn-requete">
+      <div class="grid">
+        <div class="card">
+          <div class="section-title">Soumettre une requête</div>
+          <form id="request-form" class="grid" style="gap:12px;">
+            <div>
+              <label class="muted" for="req-type">Type de requête</label>
+              <select id="req-type" class="input" required>
+                <option value="">Choisir...</option>
+                <option value="inscription">Inscription à une formation</option>
+                <option value="certificat">Problème de certificat</option>
+                <option value="support">Support technique</option>
+                <option value="suggestion">Suggestion d’amélioration</option>
+              </select>
+            </div>
+            <div>
+              <label class="muted" for="req-name">Nom et prénom</label>
+              <input id="req-name" class="input" required placeholder="Ex: BECEM Ben..." />
+            </div>
+            <div>
+              <label class="muted" for="req-email">Email</label>
+              <input id="req-email" type="email" class="input" required placeholder="vous@exemple.com" />
+            </div>
+            <div>
+              <label class="muted" for="req-msg">Détails</label>
+              <textarea id="req-msg" rows="4" class="input" required placeholder="Expliquez votre requête..."></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Envoyer la requête</button>
+            <p id="req-status" class="muted" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Prototype BYS Academy — v0.1 • Données mockées, non connecté à un backend
+  </footer>
+
+  <script>
+    // Onglets accessibles
+    const tabs = [
+      { btn: document.getElementById('btn-formations'), panel: document.getElementById('tab-formations') },
+      { btn: document.getElementById('btn-discussions'), panel: document.getElementById('tab-discussions') },
+      { btn: document.getElementById('btn-requete'), panel: document.getElementById('tab-requete') },
+    ];
+    function activateTab(index) {
+      tabs.forEach((t, i) => {
+        const selected = i === index;
+        t.btn.setAttribute('aria-selected', selected);
+        t.panel.classList.toggle('active', selected);
+      });
+    }
+    tabs.forEach((t, i) => t.btn.addEventListener('click', () => activateTab(i)));
+
+    // Données mock pour formations
+    const formations = [
+      { titre: "Pitch & Storytelling", niveau: "Débutant", mode: "Hybride", date: "12 Nov 2025", duree: "2h", certif: true },
+      { titre: "Business Model Canvas", niveau: "Intermédiaire", mode: "Présentiel", date: "15 Nov 2025", duree: "3h", certif: true },
+      { titre: "No-Code pour MVP", niveau: "Débutant", mode: "En direct", date: "19 Nov 2025", duree: "2h", certif: true },
+      { titre: "Marketing digital", niveau: "Intermédiaire", mode: "Hybride", date: "22 Nov 2025", duree: "3h", certif: true }
+    ];
+    const list = document.getElementById('formations-list');
+    formations.forEach(f => {
+      const el = document.createElement('div');
+      el.className = 'list-item';
+      el.innerHTML = `
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:10px;">
+          <div>
+            <strong>${f.titre}</strong>
+            <div class="muted">${f.niveau} • ${f.mode} • ${f.duree}</div>
+          </div>
+          <div style="text-align:right;">
+            <div class="badge">${f.date}</div><br/>
+            ${f.certif ? '<span class="badge" style="background:rgba(34,197,94,0.2); color:#dcfce7; border-color:rgba(34,197,94,0.4);">Certificat</span>' : ''}
+          </div>
+        </div>
+        <div style="margin-top:8px; display:flex; gap:8px;">
+          <button class="btn btn-primary">S’inscrire</button>
+          <button class="btn">Détails</button>
+        </div>
+      `;
+      list.appendChild(el);
+    });
+
+    // Discussions mock
+    const messagesMock = [
+      { user: "Maissa", text: "Bienvenue à toutes et à tous ! On démarre la SME 🎉" },
+      { user: "Meryem", text: "Partagez vos questions sur les formations ici." },
+      { user: "Etudiant", text: "Est-ce que le certificat est reconnu par l’administration ?" }
+    ];
+    const messagesEl = document.getElementById('messages');
+    messagesMock.forEach(m => {
+      const li = document.createElement('div');
+      li.className = 'list-item';
+      li.innerHTML = `<strong>${m.user}</strong><div class="muted">${m.text}</div>`;
+      messagesEl.appendChild(li);
+    });
+
+    // Poster un message (local)
+    const inputMsg = document.getElementById('input-message');
+    document.getElementById('send-message').addEventListener('click', () => {
+      const txt = inputMsg.value.trim();
+      if (!txt) return;
+      const li = document.createElement('div');
+      li.className = 'list-item';
+      li.innerHTML = `<strong>Vous</strong><div class="muted">${txt}</div>`;
+      messagesEl.prepend(li);
+      inputMsg.value = '';
+    });
+
+    // Soumission de requête (mock)
+    const form = document.getElementById('request-form');
+    const status = document.getElementById('req-status');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      status.textContent = "Votre requête a été enregistrée (mock). L’équipe SME vous répondra prochainement.";
+      status.style.color = '#a7f3d0'; // green-200
+      form.reset();
+    });
+  </script>
+</body>
+</html>

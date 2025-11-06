@@ -1,0 +1,8 @@
+{
+  apiKey: "AIzaSyB1234567890abcdefGHIJKLMNOP",
+  authDomain: "bys-academy-12345.firebaseapp.com",
+  projectId: "bys-academy-12345",
+  storageBucket: "bys-academy-12345.appspot.com",
+  messagingSenderId: "123456789012",
+  appId: "1:123456789012:web:abcdef1234567890"
+}
